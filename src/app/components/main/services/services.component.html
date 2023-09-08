@@ -1,11 +1,15 @@
-<div class="services-section page flip-card">
-  <div class="flip-card-inner service-content">
-    <div class="flip-card-front">
-      <img src="../../../../assets/Imagens/dashboard.svg" alt="dashboard" />
-    </div>
-    <div class="flip-card-back">
-      <h1>Dashboard</h1>
-      <p>Descrição do serviço.</p>
+<div class="services-section page">
+  <div class="services-content">
+    <div class="flip-card" *ngFor="let service of services">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{{ service.imageUrl }}" alt="Imagem de Serviço" />
+        </div>
+        <div class="flip-card-back">
+          <h2>{{ service.title }}</h2>
+          <p>{{ service.description }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
