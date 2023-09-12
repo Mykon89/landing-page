@@ -10,10 +10,9 @@
 }
 
 h1 {
-  padding-top: 80px;
   font-size: 34px;
-  margin-bottom: 20px;
   text-align: justify;
+  padding-bottom: 20px;
 }
 
 p {
@@ -29,5 +28,4 @@ p {
 img {
   max-width: 100%;
   height: auto;
-  padding-top: 80px;
 }
