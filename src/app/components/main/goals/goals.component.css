@@ -1,3 +1,21 @@
+.goals-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goals-title {
+  color: white;
+  margin-bottom: 45px;
+}
+
+.goals-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
 .carousel-container {
   display: flex;
   justify-content: space-between;
@@ -13,47 +31,19 @@
 
 .carousel {
   display: flex;
+  max-width: 1321px;
   overflow: hidden;
-  width: 100%;
-  max-width: 50%;
-  padding: 10px;
-  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
 .carousel-item {
   flex: 0 0 calc(33.33%); /* Define o tamanho dos itens do carrossel */
   padding: 10px;
-  box-sizing: border-box;
-}
-
-.carousel-item img {
-  max-width: 100%;
-  height: auto;
-}
-
-.goal-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.goal-title {
-  color: white;
-  margin-bottom: 45px;
-}
-
-.goal-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
 }
 
 .flip-card {
-  width: 440px;
-  height: 228px;
+  width: 445px;
+  height: 280px;
   perspective: 1000px;
 }
 
@@ -82,6 +72,7 @@
 
 .flip-card-front {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -97,10 +88,15 @@
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 34px;
+  font-weight: 700;
   margin-bottom: 10px;
+  color: white;
 }
 
 p {
-  font-size: 14px;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: justify;
+  color: #f3f3f3;
 }

@@ -1,32 +1,27 @@
-<div class="goal-section page">
-  <div class="goal-title">
+<div class="goals-section page">
+  <div class="goals-title">
     <h1>Objetivos</h1>
   </div>
-  <div class="goal-content">
+  <div class="goals-content">
     <div class="carousel-container">
       <button (click)="scrollCarousel('left')" class="carousel-button">
-        <svg width="42" height="24" viewBox="0 0 42 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.939342 10.9393C0.353556 11.5251 0.353556 12.4749 0.939342 13.0607L10.4853 22.6066C11.0711 23.1924 12.0208 23.1924 12.6066 22.6066C13.1924 22.0208 13.1924 21.0711 12.6066 20.4853L4.12132 12L12.6066 3.51472C13.1924 2.92893 13.1924 1.97919 12.6066 1.3934C12.0208 0.807613 11.0711 0.807613 10.4853 1.3934L0.939342 10.9393ZM42 10.5L2 10.5V13.5L42 13.5V10.5Z" fill="black"/>
-        </svg>
+        <
       </button>
       <div class="carousel">
         <div class="flip-card carousel-item" *ngFor="let goal of goals">
           <div class="flip-card-inner">
             <div class="flip-card-front">
               <img src="{{ goal.imageUrl }}" alt="Imagem de Serviço" />
+              <h2>{{ goal.title }}</h2>
             </div>
             <div class="flip-card-back">
-              <h2>{{ goal.title }}</h2>
               <p>{{ goal.description }}</p>
             </div>
           </div>
         </div>
-        <!-- Repita o bloco .carousel-item conforme necessário para mais itens -->
       </div>
-      <button (click)="scrollCarousel('right')" class="carousel-button"> 
-        <svg (click)="scrollCarousel('left')" width="41" height="23" viewBox="0 0 41 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M40.0882 12.0324C40.6584 11.4314 40.6334 10.482 40.0324 9.9118L30.2386 0.620289C29.6376 0.0501155 28.6882 0.0751002 28.118 0.676094C27.5479 1.27709 27.5729 2.22651 28.1738 2.79668L36.8794 11.0558L28.6203 19.7614C28.0501 20.3624 28.0751 21.3118 28.6761 21.882C29.2771 22.4521 30.2265 22.4271 30.7967 21.8262L40.0882 12.0324ZM1.03946 13.4995L39.0395 12.4995L38.9605 9.50052L0.96054 10.5005L1.03946 13.4995Z" fill="black"/>
-        </svg>
+      <button (click)="scrollCarousel('right')" class="carousel-button">
+        >
       </button>
     </div>
   </div>

@@ -1,49 +1,47 @@
-import { Component,  ElementRef, Renderer2  } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-goals',
   templateUrl: './goals.component.html',
-  styleUrls: ['./goals.component.css']
+  styleUrls: ['./goals.component.css'],
 })
-
 export class GoalsComponent {
-
   goals = [
     {
-      imageUrl: '../../../../assets/Imagens/dashboard.svg',
-      title: 'Dashboard',
+      imageUrl: '../../../../assets/Imagens/alcance-global.svg',
+      title: 'Alcance Global',
       description:
-        'Nosso serviço de dashboard é uma solução completa que visa simplificar a visualização e interpretação de dados para ajudar sua empresa a prosperar.',
+        'O marketing digital permite que você alcance um público global sem fronteiras físicas. Você pode alcançar pessoas de diferentes partes do mundo sem precisar estabelecer presença física em cada local...',
     },
     {
-      imageUrl: '../../../../assets/Imagens/visibilidade.svg',
-      title: 'Visibilidade',
+      imageUrl: '../../../../assets/Imagens/maior-segmentacao.svg',
+      title: 'Maior Segmentação',
       description:
-        'No mundo atual, as redes sociais desempenham um papel fundamental na construção da marca e no envolvimento com o público-alvo. No entanto, gerenciar eficazmente sua presença nas redes sociais pode ser desafiador devido à quantidade esmagadora de dados e métricas. É aqui que nosso serviço de redes sociais entra em ação.',
+        'Com ferramentas de marketing digital, você pode segmentar seu público-alvo com base em características demográficas, comportamentais, geográficas e psicográficas. Isso permite que você direcione...',
     },
     {
-      imageUrl: '../../../../assets/Imagens/googlemaps.svg',
-      title: 'Maps',
+      imageUrl: '../../../../assets/Imagens/mensuracao-precisa.svg',
+      title: 'Mensuração Precisa',
       description:
-        'Google Maps é uma ferramenta poderosa que permite acompanhar, analisar e aprimorar sua presença nas listagens de negócios do Google Maps. Ele oferece insights valiosos para ajudar sua empresa a se destacar na plataforma e atrair mais clientes locais.',
+        'Uma das grandes vantagens do marketing digital é a capacidade de medir o desempenho de suas campanhas de forma precisa e em tempo real. Você pode acompanhar métricas como taxa de abertura...',
     },
     {
-      imageUrl: '../../../../assets/Imagens/melhorias.svg',
-      title: 'Alavancar o negócio',
+      imageUrl: '../../../../assets/Imagens/custo-mais-baixo.svg',
+      title: 'Custo Mais Baixo',
       description:
-        'No cenário empresarial altamente competitivo de hoje, a tomada de decisões informadas e estratégicas é a chave para o crescimento e o sucesso. Apresentamos nosso serviço, uma ferramenta essencial para alavancar o seu negócio a novos patamares.',
+        'Em comparação com o marketing tradicional, o marketing digital costuma ser mais acessível, especialmente para pequenas empresas. Existem várias táticas de baixo custo, como marketing de mídia social...',
     },
     {
-      imageUrl: '../../../../assets/Imagens/googlemaps.svg',
-      title: 'Maps',
+      imageUrl: '../../../../assets/Imagens/variedades-de-canais.svg',
+      title: 'Variedades de Canais',
       description:
-        'Google Maps é uma ferramenta poderosa que permite acompanhar, analisar e aprimorar sua presença nas listagens de negócios do Google Maps. Ele oferece insights valiosos para ajudar sua empresa a se destacar na plataforma e atrair mais clientes locais.',
+        'O marketing digital oferece uma ampla variedade de canais para escolher, como mídias sociais, marketing de conteúdo, e-mail marketing, anúncios pagos, SEO, marketing de influenciadores, entre outros...',
     },
     {
-      imageUrl: '../../../../assets/Imagens/googlemaps.svg',
-      title: 'Maps',
+      imageUrl: '../../../../assets/Imagens/interatividade.svg',
+      title: 'Interatividade',
       description:
-        'Google Maps é uma ferramenta poderosa que permite acompanhar, analisar e aprimorar sua presença nas listagens de negócios do Google Maps. Ele oferece insights valiosos para ajudar sua empresa a se destacar na plataforma e atrair mais clientes locais.',
+        'O marketing digital oferece a oportunidade de interagir diretamente com seu público-alvo por meio de redes sociais, comentários em blogs, bate-papo ao vivo e outros canais. Isso ajuda a construir...',
     },
   ];
   constructor(private el: ElementRef, private renderer: Renderer2) {}
@@ -51,7 +49,7 @@ export class GoalsComponent {
   scrollCarousel(direction: 'left' | 'right'): void {
     const carousel = this.el.nativeElement.querySelector('.carousel');
     const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
-    const scrollAmount = 3; // Quantidade de itens a serem rolados
+    const scrollAmount = 3;
 
     if (direction === 'left') {
       carousel.scrollLeft -= itemWidth * scrollAmount;
