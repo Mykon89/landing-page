@@ -1,0 +1,13 @@
+.comments-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comments-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+img{
+  width: 100px;
+}

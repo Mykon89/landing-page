@@ -1,0 +1,15 @@
+<div class="comments-section page">
+  <div class="comments-content" *ngFor="let comment of comments ">
+    <div class="avatar">
+      <img src=" {{comment.avatar}} " alt="">
+    </div>
+    <div class="comment">
+      {{ comment.comment }}
+      <p>
+        <b>
+          {{ comment.author }}
+        </b>
+      </p>
+    </div>
+  </div>
+</div>
