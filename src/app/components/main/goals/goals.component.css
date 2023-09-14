@@ -27,6 +27,7 @@
   background-color: transparent;
   border: none;
   outline: none;
+  font-size: 75px;
 }
 
 .carousel {
@@ -45,13 +46,13 @@
 .flip-card {
   width: 445px;
   height: 280px;
-  perspective: 1000px;
+  perspective: 2500px;
 }
 
 .flip-card-inner {
   width: 100%;
   height: 100%;
-  transition: transform 1s;
+  transition: transform 1.5s;
   transform-style: preserve-3d;
   position: relative;
 }
@@ -105,57 +106,57 @@ p {
 /* mediaquery */
 
 @media (max-width: 1350px) {
-  .carousel{
+  .carousel {
     max-width: 1150px;
   }
 }
 @media (max-width: 1180px) {
-  .carousel{
+  .carousel {
     max-width: 1010px;
   }
 }
 @media (max-width: 1030px) {
-  .carousel{
+  .carousel {
     max-width: 860px;
   }
-  img{
+  img {
     width: 150px !important;
     height: 150px !important;
   }
-  h2{
+  h2 {
     font-size: 28px;
   }
-  .flip-card{
+  .flip-card {
     height: 230px;
   }
 }
 @media (max-width: 860px) {
-  .carousel{
+  .carousel {
     max-width: 690px;
   }
-  img{
+  img {
     width: 100px !important;
     height: 100px !important;
   }
-  h2{
+  h2 {
     font-size: 23px;
   }
-  .flip-card{
+  .flip-card {
     height: 170px;
   }
 }
 @media (max-width: 690px) {
-  .carousel{
+  .carousel {
     max-width: 520px;
   }
-  img{
+  img {
     width: 70px !important;
     height: 70px !important;
   }
-  h2{
+  h2 {
     font-size: 17px;
   }
-  .flip-card{
+  .flip-card {
     height: 140px;
   }
   .carousel-item {
@@ -163,17 +164,17 @@ p {
   }
 }
 @media (max-width: 520px) {
-  .carousel{
+  .carousel {
     max-width: 400px;
   }
-  img{
+  img {
     width: 120px !important;
     height: 120px !important;
   }
-  h2{
+  h2 {
     font-size: 22px;
   }
-  .flip-card{
+  .flip-card {
     height: 230px;
   }
   .carousel-item {
@@ -182,17 +183,17 @@ p {
 }
 
 @media (max-width: 400px) {
-  .carousel{
+  .carousel {
     max-width: 335px;
   }
-  img{
+  img {
     width: 150px !important;
     height: 150px !important;
   }
-  h2{
+  h2 {
     font-size: 21px;
   }
-  .flip-card{
+  .flip-card {
     width: 335px !important;
     height: 228px !important;
   }
@@ -200,5 +201,3 @@ p {
     flex: 0 0 calc(100%); /* Define o tamanho dos itens do carrossel */
   }
 }
-
-
