@@ -46,7 +46,7 @@
 .flip-card {
   width: 445px;
   height: 280px;
-  perspective: 2500px;
+  perspective: 2500px; /* Define a forma do flip */
 }
 
 .flip-card-inner {
