@@ -7,7 +7,38 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  width: 40%;
+}
+.avatar{
+  margin-right: 1%;
+}
+.author{
+  color: #000;
+  font-family: Inter;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+  margin-top: 30px;
+}
+.comment{
+  color: #000;
+font-family: Inter;
+font-size: 21px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 142.857% */
 }
 img{
-  width: 100px;
+  width: 150px;
+}
+
+@media (max-width: 860px) {
+  .comments-content{
+    flex-direction: column ;
+    width: 100%;
+  }
+  .comments-section{
+    flex-direction: column ;
+  }
 }

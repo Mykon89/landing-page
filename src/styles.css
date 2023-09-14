@@ -14,3 +14,13 @@ body {
   padding: 30px;
   margin: 100px 0 100px 0;
 }
+
+.hr{
+  width: 80%;
+  border: 1px solid black;
+}
+.separator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
