@@ -4,9 +4,6 @@
   </div>
   <div class="goals-content">
     <div class="carousel-container">
-      <button (click)="scrollCarousel('left')" class="carousel-button">
-        <
-      </button>
       <div class="carousel">
         <div class="flip-card carousel-item" *ngFor="let goal of goals">
           <div class="flip-card-inner">
@@ -20,9 +17,8 @@
           </div>
         </div>
       </div>
-      <button (click)="scrollCarousel('right')" class="carousel-button">
-        >
-      </button>
     </div>
+    <button (click)="scrollCarousel('left')" class="carousel-button"><</button>
+    <button (click)="scrollCarousel('right')" class="carousel-button">></button>
   </div>
 </div>
