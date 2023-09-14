@@ -7,7 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/main/about/about.component';
 import { ServicesComponent } from './components/main/services/services.component';
 import { GoalsComponent } from './components/main/goals/goals.component';
-import { CommentsComponent } from './components/main/comments/comments.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CommentsComponent } from './components/main/comments/comments.component
     AboutComponent,
     ServicesComponent,
     GoalsComponent,
-    CommentsComponent
+    CommentsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
