@@ -6,7 +6,7 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
   styleUrls: ['./goals.component.css'],
 })
 export class GoalsComponent implements OnInit {
-   // objetivos a serem exibidos no front
+  // objetivos a serem exibidos no front
   goals = [
     {
       imageUrl: '../../../../assets/Imagens/alcance-global.svg',
@@ -54,9 +54,18 @@ export class GoalsComponent implements OnInit {
   // função que verifica se é mobile ou nao
   isMobileDevice(): boolean {
     const userAgent = window.navigator.userAgent.toLowerCase();
-    const mobileKeywords = ['android', 'webos', 'iphone', 'ipad', 'ipod', 'blackberry', 'iemobile', 'opera mini'];
-  
-    return mobileKeywords.some(keyword => userAgent.includes(keyword));
+    const mobileKeywords = [
+      'android',
+      'webos',
+      'iphone',
+      'ipad',
+      'ipod',
+      'blackberry',
+      'iemobile',
+      'opera mini',
+    ];
+
+    return mobileKeywords.some((keyword) => userAgent.includes(keyword));
   }
   // ao ser montado, é rodado a função para verificar se é mobile ou nao, assim decidindo quantos scrolls no carousel
   ngOnInit() {
@@ -71,9 +80,7 @@ export class GoalsComponent implements OnInit {
     }
   }
 
- 
-
-// função de scroll do carousel
+  // função de scroll do carousel
   scrollCarousel(direction: 'left' | 'right'): void {
     const carousel = this.el.nativeElement.querySelector('.carousel');
     const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;

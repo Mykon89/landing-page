@@ -1,0 +1,9 @@
+.hr {
+  width: 80%;
+  border: 1px solid black;
+}
+.separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
