@@ -1,11 +1,12 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-goals',
   templateUrl: './goals.component.html',
   styleUrls: ['./goals.component.css'],
 })
-export class GoalsComponent {
+export class GoalsComponent implements OnInit {
+   // objetivos a serem exibidos no front
   goals = [
     {
       imageUrl: '../../../../assets/Imagens/alcance-global.svg',
@@ -44,17 +45,44 @@ export class GoalsComponent {
         'O marketing digital oferece a oportunidade de interagir diretamente com seu público-alvo por meio de redes sociais, comentários em blogs, bate-papo ao vivo e outros canais. Isso ajuda a construir...',
     },
   ];
+  // declarando variavel para controlar o scroll do carousel
+  scrollAmount: number = 0;
+
+  // metodo construtor
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
+  // função que verifica se é mobile ou nao
+  isMobileDevice(): boolean {
+    const userAgent = window.navigator.userAgent.toLowerCase();
+    const mobileKeywords = ['android', 'webos', 'iphone', 'ipad', 'ipod', 'blackberry', 'iemobile', 'opera mini'];
+  
+    return mobileKeywords.some(keyword => userAgent.includes(keyword));
+  }
+  // ao ser montado, é rodado a função para verificar se é mobile ou nao, assim decidindo quantos scrolls no carousel
+  ngOnInit() {
+    const isMobile = this.isMobileDevice();
+    // if que verifica se é mobile para o slide do carousel passar de 1 em 1, senao passa de 3 em 3
+    if (isMobile) {
+      // scroll do carousel agora passa de1 em 1
+      this.scrollAmount = 1;
+    } else {
+      // scroll do carousel agora passa de 3 em 3
+      this.scrollAmount = 3;
+    }
+  }
+
+ 
+
+// função de scroll do carousel
   scrollCarousel(direction: 'left' | 'right'): void {
     const carousel = this.el.nativeElement.querySelector('.carousel');
     const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
-    const scrollAmount = 3;
+    // const scrollAmount = 3;
 
     if (direction === 'left') {
-      carousel.scrollLeft -= itemWidth * scrollAmount;
+      carousel.scrollLeft -= itemWidth * this.scrollAmount;
     } else if (direction === 'right') {
-      carousel.scrollLeft += itemWidth * scrollAmount;
+      carousel.scrollLeft += itemWidth * this.scrollAmount;
     }
   }
 }

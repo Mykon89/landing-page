@@ -34,6 +34,7 @@
   max-width: 1321px;
   overflow: hidden;
   scroll-behavior: smooth;
+  transition: 1s;
 }
 
 .carousel-item {
@@ -50,7 +51,7 @@
 .flip-card-inner {
   width: 100%;
   height: 100%;
-  transition: transform 0.9s;
+  transition: transform 1s;
   transform-style: preserve-3d;
   position: relative;
 }
@@ -100,3 +101,104 @@ p {
   text-align: justify;
   color: #f3f3f3;
 }
+
+/* mediaquery */
+
+@media (max-width: 1350px) {
+  .carousel{
+    max-width: 1150px;
+  }
+}
+@media (max-width: 1180px) {
+  .carousel{
+    max-width: 1010px;
+  }
+}
+@media (max-width: 1030px) {
+  .carousel{
+    max-width: 860px;
+  }
+  img{
+    width: 150px !important;
+    height: 150px !important;
+  }
+  h2{
+    font-size: 28px;
+  }
+  .flip-card{
+    height: 230px;
+  }
+}
+@media (max-width: 860px) {
+  .carousel{
+    max-width: 690px;
+  }
+  img{
+    width: 100px !important;
+    height: 100px !important;
+  }
+  h2{
+    font-size: 23px;
+  }
+  .flip-card{
+    height: 170px;
+  }
+}
+@media (max-width: 690px) {
+  .carousel{
+    max-width: 520px;
+  }
+  img{
+    width: 70px !important;
+    height: 70px !important;
+  }
+  h2{
+    font-size: 17px;
+  }
+  .flip-card{
+    height: 140px;
+  }
+  .carousel-item {
+    flex: 0 0 calc(50%); /* Define o tamanho dos itens do carrossel */
+  }
+}
+@media (max-width: 520px) {
+  .carousel{
+    max-width: 400px;
+  }
+  img{
+    width: 120px !important;
+    height: 120px !important;
+  }
+  h2{
+    font-size: 22px;
+  }
+  .flip-card{
+    height: 230px;
+  }
+  .carousel-item {
+    flex: 0 0 calc(100%); /* Define o tamanho dos itens do carrossel */
+  }
+}
+
+@media (max-width: 400px) {
+  .carousel{
+    max-width: 335px;
+  }
+  img{
+    width: 150px !important;
+    height: 150px !important;
+  }
+  h2{
+    font-size: 21px;
+  }
+  .flip-card{
+    width: 335px !important;
+    height: 228px !important;
+  }
+  .carousel-item {
+    flex: 0 0 calc(100%); /* Define o tamanho dos itens do carrossel */
+  }
+}
+
+
