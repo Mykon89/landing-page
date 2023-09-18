@@ -1,5 +1,5 @@
-<div class="goals-section page">
-  <div class="goals-title">
+<div class="section page">
+  <div class="title">
     <h1>Objetivos</h1>
   </div>
 
@@ -23,8 +23,16 @@
         class="carousel-item"
       >
         <div class="row">
-          <div *ngFor="let goal of grupo" class="col-sm-3">
-            <img [src]="goal.imageUrl" [alt]="goal.imageAlt" />
+          <div *ngFor="let goal of grupo" class="col-sm-3 flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img [src]="goal.imageUrl" [alt]="goal.imageAlt" />
+                <h2>{{ goal.title }}</h2>
+              </div>
+              <div class="flip-card-back">
+                <p>{{ goal.description }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

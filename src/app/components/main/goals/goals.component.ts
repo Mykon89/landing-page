@@ -51,17 +51,15 @@ export class GoalsComponent implements OnInit {
         'O marketing digital oferece a oportunidade de interagir diretamente com seu público-alvo por meio de redes sociais, comentários em blogs, bate-papo ao vivo e outros canais. Isso ajuda a construir...',
     },
   ];
-
+  // array vazio para agrupar os slides
   slidesAgrupados: any[] = [];
 
-  // declarando variavel para controlar o scroll do carousel
-  scrollAmount: number = 0;
-
-  // metodo construtor
-  constructor(private el: ElementRef, private renderer: Renderer2) {
+  // metodo construtor para agrupar 3 imagens por slide.
+  constructor() {
     this.slidesAgrupados = this.agruparImagens(this.goals, 3);
   }
 
+  // iteração para o grupo de cada slide
   private agruparImagens(imagens: any[], tamanho: number): any[] {
     const grupos: any[] = [];
     for (let i = 0; i < imagens.length; i += tamanho) {
@@ -70,32 +68,5 @@ export class GoalsComponent implements OnInit {
     return grupos;
   }
 
-  // função que verifica se é mobile ou nao
-  isMobileDevice(): boolean {
-    const userAgent = window.navigator.userAgent.toLowerCase();
-    const mobileKeywords = [
-      'android',
-      'webos',
-      'iphone',
-      'ipad',
-      'ipod',
-      'blackberry',
-      'iemobile',
-      'opera mini',
-    ];
-
-    return mobileKeywords.some((keyword) => userAgent.includes(keyword));
-  }
-  // ao ser montado, é rodado a função para verificar se é mobile ou nao, assim decidindo quantos scrolls no carousel
-  ngOnInit() {
-    const isMobile = this.isMobileDevice();
-    // if que verifica se é mobile para o slide do carousel passar de 1 em 1, senao passa de 3 em 3
-    if (isMobile) {
-      // scroll do carousel agora passa de1 em 1
-      this.scrollAmount = 1;
-    } else {
-      // scroll do carousel agora passa de 3 em 3
-      this.scrollAmount = 3;
-    }
-  }
+  ngOnInit() {}
 }
