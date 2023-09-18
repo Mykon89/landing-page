@@ -2,23 +2,32 @@
   <div class="goals-title">
     <h1>Objetivos</h1>
   </div>
-  <div class="goals-content">
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="flip-card carousel-item" *ngFor="let goal of goals">
-          <div class="flip-card-inner">
-            <div class="flip-card-front">
-              <img src="{{ goal.imageUrl }}" alt="Imagem de Serviço" />
-              <h2>{{ goal.title }}</h2>
-            </div>
-            <div class="flip-card-back">
-              <p>{{ goal.description }}</p>
-            </div>
+
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    data-ride="carousel"
+  >
+    <ol class="carousel-indicators">
+      <li
+        *ngFor="let grupo of slidesAgrupados; let i = index"
+        [class.active]="i === 0"
+        data-target="#myCarousel"
+        [attr.data-slide-to]="i"
+      ></li>
+    </ol>
+    <div class="carousel-inner">
+      <div
+        *ngFor="let grupo of slidesAgrupados; let i = index"
+        [class.active]="i === 0"
+        class="carousel-item"
+      >
+        <div class="row">
+          <div *ngFor="let goal of grupo" class="col-sm-3">
+            <img [src]="goal.imageUrl" [alt]="goal.imageAlt" />
           </div>
         </div>
       </div>
     </div>
   </div>
-  <button (click)="scrollCarousel('left')" class="carousel-button"><</button>
-  <button (click)="scrollCarousel('right')" class="carousel-button">></button>
 </div>
