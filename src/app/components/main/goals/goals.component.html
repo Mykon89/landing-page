@@ -8,14 +8,6 @@
     class="carousel slide"
     data-ride="carousel"
   >
-    <ol class="carousel-indicators">
-      <li
-        *ngFor="let grupo of slidesAgrupados; let i = index"
-        [class.active]="i === 0"
-        data-target="#myCarousel"
-        [attr.data-slide-to]="i"
-      ></li>
-    </ol>
     <div class="carousel-inner">
       <div
         *ngFor="let grupo of slidesAgrupados; let i = index"
@@ -37,5 +29,14 @@
         </div>
       </div>
     </div>
+    <ol class="carousel-indicators">
+      <li
+        *ngFor="let grupo of slidesAgrupados; let i = index"
+        data-target="#myCarousel"
+        [class.active]="i === 0"
+        [attr.data-slide-to]="i"
+        [attr.data-slide]="i"
+      ></li>
+    </ol>
   </div>
 </div>

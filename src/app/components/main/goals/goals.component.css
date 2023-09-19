@@ -4,18 +4,22 @@
   align-items: center;
 }
 
-div.row {
-  display: flex;
-  justify-content: center;
+.title {
+  color: white;
+}
+
+.row {
+  justify-content: space-around;
   align-items: center;
-  gap: 50px;
-  height: 500px;
+  margin: 0;
+  height: 350px;
 }
 
 .flip-card {
   width: 445px;
   height: 280px;
   perspective: 1000px;
+  padding: 0;
 }
 
 .flip-card-inner {
@@ -32,21 +36,20 @@ div.row {
 
 .flip-card-front,
 .flip-card-back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 0;
+  margin: 0;
   position: absolute;
   backface-visibility: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   background: rgba(0, 0, 0, 0.5);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-.flip-card-front {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .flip-card-front img {
@@ -66,4 +69,8 @@ h2 {
 
 p {
   font-size: 14px;
+}
+
+.carousel-indicators {
+  margin-bottom: -50px;
 }
